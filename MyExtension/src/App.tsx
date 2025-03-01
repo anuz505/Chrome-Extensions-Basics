@@ -16,7 +16,10 @@ function App() {
           args: [colour, fnColour],
           func: (colour, fnColour) => (
             (document.body.style.backgroundColor = colour),
-            (document.body.style.color = fnColour)
+            (document.body.style.color = fnColour),
+            document
+              .querySelectorAll("p")
+              .forEach((p) => (p.style.color = fnColour))
           ),
         });
       } else {
